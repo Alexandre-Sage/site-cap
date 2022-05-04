@@ -1,0 +1,50 @@
+@import "./main.scss";
+nav{
+    ul{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        min-width: 60rem;
+        list-style: none;
+        .activated{
+            background-color: white;
+            border: 1px solid white;
+            height:auto;
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+
+            color:black;
+            padding-top: 2rem;
+            margin-top: -2rem;
+        }
+        li{
+            font:{
+                family:"made-sunflower";
+                size: 1.6rem;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                //justify-content: space-around;
+                width: 20rem;
+                height: 13.5rem;
+                position: absolute;
+                width: auto;
+                margin-top: 1.5%;
+                background-color: white;
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                p{
+                    width: 20rem;
+
+                    font:{
+                        family: "raleway";
+                        size:1.6rem;
+                    }
+                    color:black;
+                }
+            }
+        }//li
+    }//ul
+}//nav

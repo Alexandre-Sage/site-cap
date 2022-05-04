@@ -1,0 +1,96 @@
+@import "./main.scss";
+$landing-page-background-color: black;
+$landing-page-font-color: white;
+
+.landing-page-body{
+    background-color: $landing-page-background-color;
+    color: $landing-page-font-color;
+    width: 90%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: auto;
+    header{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        margin-top: 1.5%;
+        .landing-page-spacer{
+            width: 25%;
+        }
+        Nav{
+            width: 65%;
+        }
+    }
+    main{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        .image-container{
+            width: 25%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .text-button-container{
+            width: 65%;
+            span{
+                display: flex;
+                width: 100%;
+                font-size: 2rem;
+                align-items: center;
+                h1{
+                    font:{
+                        family: "made-sunflower";
+                        size: 2.5rem;
+                    }
+                    margin-right: 1%;
+                }
+                h2{
+                    font:{
+                        family: "raleway";
+                        size: 1.6rem;
+                    }
+                    margin-left: 1%;
+                }
+            }
+            div{
+                p{
+                    font:{
+                        family: "raleway";
+                        size: 1.6rem;
+                    }
+                    strong{
+                        font:{
+                            family: "made-sunflower";
+                            size: 2rem;
+                        }
+                    }
+                }
+                .download-cv{
+                    font-size: 2rem;
+                }
+            }
+            #download-button{
+                //margin: auto;
+                border: 1px solid white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 18rem;
+                height: 3rem;
+                border-radius: 0.5rem;
+                font:{
+                    size: 1.6rem;
+                    font-family: "made-sunflower";
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@font-face{
+    font-family: "made-sunflower";
+    src: url("../fonts/landing-page/made-sunflower.otf");
+}
+@font-face{
+    font-family: "raleway";
+    src: url("../fonts/landing-page/raleway.ttf");
+}
+@mixin desktop-screen-medium{
+    @media(min-width: 1200px){
+        @content;
+    }
+}
+
+@mixin desktops-screens-small{
+    @media(min-width: 1024px) and (max-width:1200px){
+        @content;
+    }
+}
+
+@mixin tablets-laptops-screens{
+    @media(min-width: 769px) and (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin tablets-screens{
+    @media(min-width: 481px) and (max-width: 768px){
+        @content;
+    }
+}
+@mixin mobile-screens-small{
+    @media(max-width: 480px){
+        @content;
+    }
+}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}};
+
+*{
+    font-size: 10px;
+}
+#root{
+
+}
+body{
+
+}
