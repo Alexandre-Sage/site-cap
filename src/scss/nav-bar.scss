@@ -6,43 +6,93 @@ nav{
         width: 100%;
         min-width: 60rem;
         list-style: none;
+        a{
+            cursor: pointer;
+            height:auto;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: white;
+            font:{
+                family:"made-sunflower";
+                size: 1.6rem;
+            }
+        }
         .activated{
-            background-color: white;
-            border: 1px solid white;
+            height:auto;
+            display: flex;
+            flex-direction: column;
+            color:black;
+        }
+        .design-cont{
+            width: 11.5rem;
+        }
+        #design{
+            width: 11.2rem;
+        }
+        li{
+            cursor: pointer;
             height:auto;
             display: flex;
             flex-direction: column;
             width: 20rem;
-
-            color:black;
-            padding-top: 2rem;
-            margin-top: -2rem;
-        }
-        li{
+            p{
+                position: absolute;
+                z-index: 2;
+                margin-top: -0.0%;
+                font:{
+                    family:"made-sunflower";
+                    size: 1.6rem;
+                }
+            }
             font:{
                 family:"made-sunflower";
                 size: 1.6rem;
             }
             div{
-                display: flex;
-                flex-direction: column;
-                //justify-content: space-around;
-                width: 20rem;
-                height: 13.5rem;
+                height: 17.5rem;
                 position: absolute;
-                width: auto;
-                margin-top: 1.5%;
+                width: 19.2rem;
+                margin-top:-2.5%;
+                margin-left:-0.1rem;
                 background-color: white;
                 border-bottom-left-radius: 1rem;
                 border-bottom-right-radius: 1rem;
-                p{
-                    width: 20rem;
-
-                    font:{
-                        family: "raleway";
-                        size:1.6rem;
+                z-index: 0;
+                opacity: 0;
+                animation: fadeIn ease-in 1;
+                animation-fill-mode: forwards;
+                animation-duration: 1s;
+                //animation-delay: 0.5s;
+                div{
+                    margin-top: 25.5%;
+                    margin-left:0.1rem;
+                    width: 19.1rem;
+                    height: 15rem;
+                    a{
+                        width: 20rem;
+                        margin-left: 2.5%;
+                        margin-top: 10%;
+                        font:{
+                            family: "raleway";
+                            size:1.3rem;
+                        }
+                        color:black;
                     }
-                    color:black;
+                }
+            }
+            .design{
+                width: 11.7rem;
+
+                div{
+                    height: 15rem;
+                    width: 11.7rem;
+                    margin-top: 40%;
+                    margin-left:-0.01rem;
+                    a{
+                        margin-top: 17.5%;
+
+                    }
                 }
             }
         }//li

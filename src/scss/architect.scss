@@ -1,0 +1,31 @@
+.architect-body{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    header{
+        display: flex;
+        justify-content: flex-end;
+        width: 90%;
+        margin-top: 1.5%;
+        margin-right: 6.2%;
+        margin-left: auto;
+        Nav{
+            width: 65%;
+            div{
+                background-color: black;
+            }
+            .activated{
+                color: white;
+            }
+            .sub-link{
+                color:white;
+            }
+            a{
+                color: black;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import {React,Component} from 'react';
+import {Link} from "react-router-dom";
 import "../../scss/nav-bar.scss";
 
 export default class NavBar extends Component{
@@ -11,37 +12,45 @@ export default class NavBar extends Component{
             architectNav:[
                 {
                     date: 2018,
-                    name: "Ibis Budget"
+                    name: "Ibis Budget",
+                    path: "/architecture-interieur/ibis-budget"
                 },
                 {
                     date: 2019,
-                    name: "So' Junior Suite"
+                    name: "So' Junior Suite",
+                    path: "/architecture-interieur/so-junior"
                 },
                 {
                     date: 2020,
-                    name: "Sushi Shop"
+                    name: "Sushi Shop",
+                    path: "#"
                 },
                 {
                     date: 2021,
-                    name: "Diplome Baragouin"
+                    name: "Diplome Baragouin",
+                    path: "#"
                 },
             ],
             designNav:[
                 {
                     date: 2017,
-                    name: "Corpsage"
+                    name: "Corpsage",
+                    path: "#"
                 },
                 {
                     date: 2018,
-                    name: "Extent"
+                    name: "Extent",
+                    path: "#"
                 },
                 {
                     date: 2019,
-                    name: "Trousso"
+                    name: "Trousso",
+                    path: "#"
                 },
                 {
                     date: 2020,
-                    name: "Cabriole"
+                    name: "Cabriole",
+                    path: "#"
                 },
             ]
         }
@@ -49,18 +58,19 @@ export default class NavBar extends Component{
         if(event.target.classList[0] && event.target.id[0]){
             event.target.classList.remove("activated")
         }else if(event.target.id[0] && !event.target.classList[0]){
-            event.target.classList.add("activated")
+            setTimeout(()=>event.target.classList.add("activated"),1000)
         }
         switch(event.target.id){
             case "architect":
             if(!this.state.displayDesignNav && !this.state.displayArchitectNav){
                 this.setState({
                     subNavJsx:
-                        <div >
+                        <div className="sub-nav-list">
+                            <div>
                             {this.state.architectNav.map((item,key)=>(
-                                console.log(item.name),
-                                <p key={key}>{item.date} | {item.name}</p>
+                                <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                             ))}
+                            </div>
                         </div>,
                     displayArchitectNav:true,
                 })
@@ -70,10 +80,12 @@ export default class NavBar extends Component{
                     displayDesignNav:false,
                     subNavJsx:
                         <div className="sub-nav-list">
+                            <div>
                             {this.state.architectNav.map((item,key)=>(
-                                console.log(item.name),
-                                <p key={key}>{item.date} | {item.name}</p>
+                                console.log(item.path),
+                                <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                             ))}
+                            </div>
                         </div>,
                     displayArchitectNav:true,
                 })
@@ -85,11 +97,13 @@ export default class NavBar extends Component{
                 if(!this.state.displayDesignNav && !this.state.displayArchitectNav){
                     this.setState({
                         subNavJsx:
-                            <div  className="sub-nav-list">
+                            <div  className="sub-nav-list design">
+                                <div>
                                 {this.state.designNav.map((item,key)=>(
                                     console.log(item.name),
-                                    <p key={key}>{item.date} | {item.name}</p>
+                                    <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                                 ))}
+                                </div>
                             </div>,
                         displayDesignNav:true,
                     })
@@ -98,11 +112,13 @@ export default class NavBar extends Component{
                     this.setState({
                         displayArchitectNav:false,
                         subNavJsx:
-                            <div  className="sub-nav-list">
+                            <div  className="sub-nav-list design">
+                                <div>
                                 {this.state.designNav.map((item,key)=>(
                                     console.log(item.name),
-                                    <p key={key}>{item.date} | {item.name}</p>
+                                    <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                                 ))}
+                                </div>
                             </div>,
                         displayDesignNav:true,
                     })
@@ -114,20 +130,22 @@ export default class NavBar extends Component{
     }handleNav(){
 
     } render(){
+        const array=this.state.architectNav[0];
+        console.log(array);
         return(
                 <nav>
                     <ul>
-                        <li id="acceuil">Accueil</li>
-                        <li id="architect" onClick={(event)=>this.handleSubNavDisplay(event)}>
-                            Architecture d'intérieur
+                        <Link to="/" id="acceuil">Accueil</Link>
+                        <li >
+                            <p id="architect" onClick={(event)=>this.handleSubNavDisplay(event)}>Architecture d'intérieur</p>
                             {this.state.displayArchitectNav?this.state.subNavJsx:null}
                         </li>
-                        <li id="design" onClick={(event)=>this.handleSubNavDisplay(event)}>
-                            Design d'objet
+                        <li className="design-cont">
+                            <p id="design" onClick={(event)=>this.handleSubNavDisplay(event)}>Design d'objet</p>
                             {this.state.displayDesignNav?this.state.subNavJsx:null}
                         </li>
-                        <li id="dessin">Dessin</li>
-                        <li id="contact">Contact</li>
+                        <Link to="/" id="dessin">Dessin</Link>
+                        <Link to="#" id="contact">Contact</Link>
                     </ul>
                 </nav>
         )

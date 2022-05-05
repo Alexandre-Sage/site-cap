@@ -1,0 +1,257 @@
+@import "./main.scss";
+
+#ibis-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //width: 90%;
+    margin-top: 5%;
+    opacity: 0;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    img{
+        width: 10rem;
+        height: 10rem;
+    }
+    .ibis-header{
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        align-self: flex-end;
+        .ibis-spacer{
+
+        }
+        .image-container{
+            width: 75%;
+            margin-left: auto;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .title-text-ctn{
+            margin-top: -5rem;
+            h1{
+                font:{
+                    size: 2rem;
+                    family: "raleway";
+                    weight: normal;
+                }
+                strong{
+                    font:{
+                        size:2rem;
+                        family: "made-sunflower"
+                    }
+                }
+            }
+            p{
+                font:{
+                    family: "raleway";
+                    size: 1.6rem;
+                }
+            }
+        }
+    }//header
+    .cut-container{
+        margin-top: 5%;
+        width: 85%;
+        margin-left: auto;
+        h2{
+            width: 75%;
+            font:{
+                size: 2rem;
+                family: "raleway";
+                weight:normal
+            }
+            strong{
+                font:{
+                    size: 2rem;
+                    family: "made-sunflower";
+                    weight:bold
+                }
+            }
+        }
+        .cut-images-container{
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            justify-content: space-around;
+            align-content: space-around;
+            div{
+                width: 45%;
+                height: 70rem;
+                margin-top: 0;
+                h3{
+                    margin-left: 1.5rem;
+                    font:{
+                        size: 2rem;
+                        family: "raleway";
+                    }
+                }
+                div{
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    img{
+                        width: 100%;
+                        height:auto;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+            .cuts{
+                height: 70rem;
+                h3{
+
+                }
+                div{
+                    width: 100%;
+                    height: auto;
+                    min-height: 30rem;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }//cut-images
+    }//cut
+    .draw-container{
+        margin-top: 5%;
+        height: 85rem;
+        width: 85%;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        h2{
+            width: 75%;
+            margin-bottom: 5%;
+            font:{
+                size: 2rem;
+                family: "raleway";
+                weight:normal
+            }
+            strong{
+                font:{
+                    size: 2rem;
+                    family: "made-sunflower";
+                    weight:bold
+                }
+            }
+        }
+        div{
+            margin-left: 2.5%;
+            width: 50%;
+            height: 25rem;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .middle-image{
+            align-self: flex-end;
+            margin-right: 2.5%;
+        }
+    }//draw
+    .typo-container{
+        width: 85%;
+        margin-left: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        h2{
+            width: 75%;
+            margin-right: auto;
+            margin-bottom: 5%;
+            font:{
+                size: 2rem;
+                family: "raleway";
+                weight:normal
+            }
+            strong{
+                font:{
+                    size: 2rem;
+                    family: "made-sunflower";
+                    weight:bold
+                }
+            }
+        }
+        div{
+            width: 45%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//typo
+    .goodies-container{
+        width: 85%;
+        margin-left: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        h2{
+            width: 75%;
+            margin-right: auto;
+            margin-bottom: 5%;
+            font:{
+                size: 2rem;
+                family: "raleway";
+                weight:normal
+            }
+            strong{
+                font:{
+                    size: 2rem;
+                    family: "made-sunflower";
+                    weight:bold
+                }
+            }
+        }
+        div{
+            width: 45%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//goodies
+    .web-site{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        h2{
+            width: 75%;
+            margin-right: auto;
+            margin-bottom: 5%;
+            font:{
+                size: 2rem;
+                family: "raleway";
+                weight:normal
+            }
+            strong{
+                font:{
+                    size: 2rem;
+                    family: "made-sunflower";
+                    weight:bold
+                }
+            }
+        }
+        div{
+            width: 85%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}//main

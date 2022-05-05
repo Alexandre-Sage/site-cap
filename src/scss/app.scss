@@ -12,6 +12,7 @@ $landing-page-font-color: white;
     flex-direction: column;
     align-items:center;
     margin: auto;
+
     header{
         display: flex;
         justify-content: space-around;
@@ -29,7 +30,12 @@ $landing-page-font-color: white;
         justify-content: space-around;
         width: 90%;
         margin: auto;
-        margin-top: 5%;
+        margin-top: 7.5%;
+        opacity: 0;
+        animation: fadeIn ease-in 1;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
         .image-container{
             width: 25%;
             overflow: hidden;

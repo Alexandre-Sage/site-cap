@@ -12,6 +12,7 @@ export default class App extends Component {
         }
     } componentDidMount(){
         document.body.classList.add("landing-page-body");
+        document.body.classList.remove("architect-body")
     } render(){
         const spacerJsx=<div className="landing-page-spacer"></div>
 
