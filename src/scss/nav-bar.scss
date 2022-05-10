@@ -4,7 +4,7 @@ nav{
         display: flex;
         justify-content: space-around;
         width: 100%;
-        min-width: 60rem;
+        //min-width: 60rem;
         list-style: none;
         a{
             cursor: pointer;
@@ -38,7 +38,7 @@ nav{
             width: 20rem;
             p{
                 position: absolute;
-                z-index: 2;
+                z-index: 23;
                 margin-top: -0.0%;
                 font:{
                     family:"made-sunflower";
@@ -58,7 +58,7 @@ nav{
                 background-color: white;
                 border-bottom-left-radius: 1rem;
                 border-bottom-right-radius: 1rem;
-                z-index: 0;
+                z-index: 22;
                 opacity: 0;
                 animation: fadeIn ease-in 1;
                 animation-fill-mode: forwards;

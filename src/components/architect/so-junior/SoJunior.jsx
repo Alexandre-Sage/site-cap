@@ -1,10 +1,15 @@
 import React from 'react';
 import {Component} from "react";
+import logo from "../../../images/architecture/so/logo.png";
 import smith from "../../../images/architecture/so/smith.jpg";
 import propagation from "../../../images/architecture/so/propagation.jpg";
 import moscou from "../../../images/architecture/so/moscou.jpg";
 import plan from "../../../images/architecture/so/plan.png";
 import cut from "../../../images/architecture/so/coupe.png";
+import materials from "../../../images/architecture/so/matériaux.png";
+import floor from "../../../images/architecture/so/Sol.png";
+import presc from "../../../images/architecture/so/prescripition.png";
+import "../../../scss/so.scss";
 
 export default class SoJunior extends Component{
     constructor(props){
@@ -13,13 +18,22 @@ export default class SoJunior extends Component{
 
         }
     }componentDidMount(){
-
+        const soMain=document.getElementById("so-main");
+        const header=document.getElementById("arch-header")
+        soMain.classList.add("transition-main")
+        header.classList.add("transition-header")
+        setTimeout(()=>{
+            soMain.classList.remove("transition-main")
+            header.classList.remove("transition-header")
+            soMain.style.width="90%";
+        },3000)
+        window.scrollTo(0,0)
     }render(){
         return(
-            <main>
-                <div clasName="so-header">
-                    <div>
-                        <img src="" alt="" />
+            <main id="so-main">
+                <div className="so-header">
+                    <div className="image-container">
+                        <img src={logo} alt="" />
                     </div>
                     <div className="title-text-ctn">
                         <h1><strong>So’ Junior Suite</strong> | 2019</h1>
@@ -34,7 +48,7 @@ export default class SoJunior extends Component{
                     <div className="images-container">
                     <div>
                         <div>
-                            <img src={smith} alt="Paul Smith Chemise" />
+                            <img className="smith" src={smith} alt="Paul Smith Chemise" />
                         </div>
                         <p>Paul Smith - Chemise</p>
                     </div>
@@ -66,29 +80,20 @@ export default class SoJunior extends Component{
                 </div>
                 <div className="footer-container">
                     <h2><strong>Architecture d'intérieur</strong> | Planches matériaux</h2>
-                    <div>
-                        <div>
+                    <div className="materials-res-ctn">
+                        <div className="materials-container">
                             <div>
-                                <img src="" alt="" />
+                                <div>
+                                    <img src={materials} alt="" />
+                                </div>
                             </div>
-                            <div>
-                                <img src="" alt="" />
-                            </div>
-                            <div>
-                                <img src="" alt="" />
-                            </div>
-                            <div>
-                                <img src="" alt="" />
-                            </div>
-                            <div>
-                                <img src="" alt="" />
+                            <div className="floor">
+                                <img src={floor} alt="" />
                             </div>
                         </div>
-                        <div>
+                        <div className="pres-container">
+                            <img src={presc} alt="" />
                         </div>
-                    </div>
-                    <div>
-                        <img src="" alt="" />
                     </div>
                 </div>
             </main>

@@ -23,12 +23,12 @@ export default class NavBar extends Component{
                 {
                     date: 2020,
                     name: "Sushi Shop",
-                    path: "#"
+                    path: "sushi-shop"
                 },
                 {
                     date: 2021,
                     name: "Diplome Baragouin",
-                    path: "#"
+                    path: "baragouin"
                 },
             ],
             designNav:[
@@ -133,7 +133,7 @@ export default class NavBar extends Component{
         const array=this.state.architectNav[0];
         console.log(array);
         return(
-                <nav>
+                <nav id="nav-bar">
                     <ul>
                         <Link to="/" id="acceuil">Accueil</Link>
                         <li >

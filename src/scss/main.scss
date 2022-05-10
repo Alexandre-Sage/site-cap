@@ -35,6 +35,49 @@
     }
 }
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}};
+@keyframes left-slide{from{left:100;}to{left:5%;}};
+@-webkit-keyframes slide {
+    0% { -webkit-transform: translateX(-100%); }
+    100% { -webkit-transform: translateX(0%); }
+}
+//@keyframes left-slide{from{margin-right:1000rem;}to{margin-right:0rem;}};
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+@mixin paragraph{
+    font:{
+        family: "raleway";
+        size: 1.6rem;
+    }
+};
+@mixin all-h1{
+    font:{
+        size: 2rem;
+        family: "raleway";
+        weight: normal;
+    }
+    strong{
+        font:{
+            size:2rem;
+            family: "made-sunflower"
+        }
+    }
+}
+
+@mixin all-h2{
+    font:{
+        size: 2rem;
+        family: "raleway";
+        weight:normal
+    }
+    strong{
+        font:{
+            size: 2rem;
+            family: "made-sunflower";
+            weight:bold
+        }
+    }
+}
 
 *{
     font-size: 10px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from "react";
+import {Link} from "react-router-dom";
 import logo from "../../../images/architecture/ibis/logo.png";
 import rdc from "../../../images/architecture/ibis/rdc.png";
 import r1 from "../../../images/architecture/ibis/r1.png";
@@ -126,6 +127,7 @@ export default class IbisMain extends Component{
                         <img src={mac} alt="" />
                     </div>
                 </div>
+                <Link to={"/architecture-interieur/so-junior"}>Next</Link>
             </main>
         )
     }

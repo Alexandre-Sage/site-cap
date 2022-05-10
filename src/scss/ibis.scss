@@ -5,13 +5,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    //width: 90%;
+    width: 90%;
     margin-top: 5%;
     opacity: 0;
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
     animation-duration: 1s;
     animation-delay: 0.5s;
+    //margin-left: auto;
     img{
         width: 10rem;
         height: 10rem;
@@ -21,6 +22,7 @@
         flex-direction: column;
         width: 65%;
         align-self: flex-end;
+        margin-right: 3%;
         .ibis-spacer{
 
         }
@@ -58,7 +60,7 @@
     }//header
     .cut-container{
         margin-top: 5%;
-        width: 85%;
+        width: 90%;
         margin-left: auto;
         h2{
             width: 75%;
@@ -124,7 +126,7 @@
     .draw-container{
         margin-top: 5%;
         height: 85rem;
-        width: 85%;
+        width: 90%;
         margin-left: auto;
         display: flex;
         flex-direction: column;
@@ -159,7 +161,7 @@
         }
     }//draw
     .typo-container{
-        width: 85%;
+        width: 90%;
         margin-left: auto;
         margin-top: 5%;
         display: flex;
@@ -191,7 +193,7 @@
         }
     }//typo
     .goodies-container{
-        width: 85%;
+        width: 90%;
         margin-left: auto;
         margin-top: 5%;
         display: flex;
@@ -224,7 +226,7 @@
         }
     }//goodies
     .web-site{
-        width: 85%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -247,7 +249,7 @@
             }
         }
         div{
-            width: 85%;
+            width: 90%;
             img{
                 width: 100%;
                 height: auto;
