@@ -23,12 +23,12 @@ export default class NavBar extends Component{
                 {
                     date: 2020,
                     name: "Sushi Shop",
-                    path: "sushi-shop"
+                    path: "/architecture-interieur/sushi-shop"
                 },
                 {
                     date: 2021,
                     name: "Diplome Baragouin",
-                    path: "baragouin"
+                    path: "/architecture-interieur/baragouin"
                 },
             ],
             designNav:[

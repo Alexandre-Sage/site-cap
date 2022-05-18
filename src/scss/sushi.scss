@@ -1,1 +1,200 @@
 @import "main.scss";
+
+#sushi-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 5%;
+    img{
+        width: 10rem;
+        height:10rem
+    }
+    .sushi-header{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        width: 90%;
+        .title-logo-container{
+
+            display: flex;
+            flex-direction: column;
+            .logo-container{
+                display: flex;
+                align-self: flex-end;
+                width: 25%;
+                margin-bottom: -7.5%;
+                img{
+                    width: 100%;
+                    height:auto;
+                }
+            }//text-container
+            .text-container{
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-around;
+                .image-container{
+                    display: flex;
+                    //width: 100%;
+                    //height: 37.5rem;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .title-container{
+                    width: auto;
+                    margin-left: 4.5%;
+                    h2{
+                        @include all-h2;
+                    }
+                    p{
+                        @include paragraph;
+                        font-size: 1.5rem;
+                    }
+                }
+            }//logo-container
+        }//title-logo-container
+        .header-image-container{
+            width: 100%;
+            margin-top: 2.5%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//sushi-header
+    .architecture-3d{
+        margin-top: 5%;
+        width: 90%;
+        margin-left: auto;
+        h2{
+            @include all-h2;
+        }
+        div{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            div{
+                width: 49.5%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }//3d
+    .face{
+        width: 90%;
+        margin-left: auto;
+        margin-top: 5%;
+        h2{
+            @include all-h2;
+        }
+        div{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2.5%;
+            div{
+                width: 62.5%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .face-two{
+                width: 35%;
+            }
+        }
+    }//face
+    .plan{
+        width: 90%;
+        margin-left: auto;
+        margin-top: 5%;
+        h2{
+            @include all-h2;
+        }
+        div{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//plan
+    .cut{
+
+        width: 90%;
+        margin-left: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        h2{
+            @include all-h2
+        }
+        div{
+            width: 100%;
+            .first-cut{
+                width: 85%;
+                margin-left: auto;
+            }
+            div{
+                width: 50%;
+                margin-top: 2.5%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }//cut
+    .visual{
+        width: 90%;
+        margin-left: auto;
+        margin-top: 5%;
+        h2{
+            @include all-h2;
+        }
+        div{
+            width: 100%;
+            margin-top: 2.5%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//visual
+    .web{
+        width: 90%;
+        margin-left: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        h2{
+            @include all-h2;
+        }
+        div{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2.5%;
+            .image-container{
+                width: 59.5%;
+                img{
+                    width:100%;
+                    height: auto;
+                }
+            }
+            .images-container{
+                width: 40%;
+                div{
+                    img{
+                        width:100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+} //sushi-main

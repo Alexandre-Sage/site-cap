@@ -38,7 +38,7 @@ export default class IbisMain extends Component{
             ]
         }
     }componentDidMount(){
-
+        document.body.classList.remove("bara-body")
     }render(){
         return(
             <main id="ibis-main">

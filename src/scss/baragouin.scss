@@ -1,8 +1,412 @@
 @import "main.scss";
-
+.bara-body{
+    background: url("../images/architecture/baragouin/fond.png") no-repeat;
+    background-size: cover;
+}
 #bara-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 5%;
     img{
         width: 10rem;
         height: 10rem;
     }
-}
+    .bara-header{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        width: 90%;
+        .logo-container{
+            align-self: flex-end;
+            width: 7.5%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .title-container{
+            width: 75%;
+            margin-left: auto;
+            margin-top: -5%;
+            h1{
+                @include all-h1;
+                color: white;
+            }
+            p{
+                @include paragraph;
+                color: white;
+            }
+        }
+    }//bara-header
+    .subject{
+        margin-top: 5%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        h2{
+            @include all-h2;
+            color: white;
+        }
+        .images-container{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            .drink{
+                width: 25%;
+                div{
+                    height: 50rem;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                        height: 50rem;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+                p{
+                    color: white;
+                    @include paragraph;
+                }
+            }//div
+            .wine{
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                div{
+                    width: 100%;
+                    overflow: hidden;
+                    height: 40rem;
+                    img{
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+                p{
+                    color: white;
+                    @include paragraph;
+                }
+            }
+            .glasse{
+                width: 40%;
+                div{
+                    width: 100%;
+                    overflow: hidden;
+                    height: 50rem;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                p{
+                    color: white;
+                    @include paragraph;
+                }
+            }
+        }//image-container
+    }//subject
+    .agenda{
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        margin-left: auto;
+        margin-top: 5%;
+        h2{
+            @include all-h2;
+            color: white;
+        }
+        div{
+            margin-top: 5%;
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//agenda
+    .place{
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+        margin-top: 5%;
+        flex-wrap: wrap;
+        h2{
+            @include all-h2;
+            color: white;
+            width: 100%;
+            margin-bottom: 5%;
+        }
+        .column-1{
+            width: 45%;
+            height: 80rem;
+
+            .draw{
+                margin-bottom: 2.5rem;
+            }
+            div{
+                width: 100%;
+                //height: 20rem;
+                img{
+                    width: 100%;
+                    height: auto;
+                    //object-position: center;
+                    //object-fit: contain;
+                    //transform: scale(1,0.8)
+                }
+            }
+        }
+        .column-2{
+            margin-left: 2.5rem;
+            width: 45%;
+            height: 80rem;
+            overflow: hidden;
+            p{
+                @include paragraph;
+                color: white;
+            }
+            div{
+                margin-top: 7.3rem;
+                width: 100%;
+                img{
+                    width: 100%;
+                    height:35rem;
+                    transform: scale(1.1,1.1)
+                }
+            }
+        }
+    }//place
+    .position{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-top: 5%;
+        h2{
+            @include all-h2;
+            align-self: flex-start;
+            color: white;
+        }
+        p{
+            margin-top: 5%;
+            @include paragraph;
+            color: white;
+        }
+        div{
+            margin-top: 2.5%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            div{
+                flex-direction: column;
+                width: 32.5%;
+                height: 50rem;
+                div{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                        height: 45rem;
+                    }
+                }
+                p{
+
+                }
+            }
+        }
+    }//position
+    .research{
+        h2{
+            @include all-h2;
+            color: white;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
+    .final-project-face{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-top: 5%;
+        h2{
+            @include all-h2;
+        }
+        .line-1{
+            margin-top: 5%;
+            width: 100%;
+            display:flex;
+            justify-content: space-between;
+            div{
+                width: 49%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .line-2{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5%;
+            div{
+                width: 32%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }// research fin background
+    .final-project-plan{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-top: 5%;
+        h2{
+            @include all-h2;
+        }
+        .line-1{
+            display: flex;
+            width: 100%;
+            margin-top: 5%;
+            div{
+                width: 50%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .line-2{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 5%;
+            div{
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .start{
+                width: 65%;
+                margin-top: -10%;
+                margin-left: -5%;
+            }
+            .end{
+                margin-left: 25%;
+                width: 75%;
+            }
+        }
+        .line-3{
+            margin-top: 5%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            div{
+                width: 48%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }//final-project-plan
+    .final-project-3d{
+        width: 90%;
+        display: flex;
+        //flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-top: 5%;
+        h2{
+            @include all-h2;
+        }
+        div{
+            display: flex;
+            //flex-direction: column;
+            width: 100%;
+            justify-content: space-between;
+            .simple{
+                width: 58%;
+                margin-top: 3rem;
+                //height: 55rem;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .double{
+                display: flex;
+                flex-direction: column;
+                width:39%;
+                justify-content: space-around;
+                div{
+                    width: 100%;
+                    margin-top: 3rem;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }//final-project-3d
+    .final-project-visual{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-top: 5%;
+        h2{
+            @include all-h2;
+        }
+        .line-1{
+            margin-top: 5%;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .book-container{
+                display: flex;
+                margin-left: -1.2%;
+                width: 48%;
+                justify-content: space-around;
+                div{
+                    width: 45%;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .image-container{
+                width: 52%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .line-2{
+            width: 100%;
+            margin-bottom: 5%;
+            margin-top: 2.5%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//final-project-visual
+}//bara-main

@@ -18,16 +18,8 @@ export default class SoJunior extends Component{
 
         }
     }componentDidMount(){
-        const soMain=document.getElementById("so-main");
-        const header=document.getElementById("arch-header")
-        soMain.classList.add("transition-main")
-        header.classList.add("transition-header")
-        setTimeout(()=>{
-            soMain.classList.remove("transition-main")
-            header.classList.remove("transition-header")
-            soMain.style.width="90%";
-        },3000)
-        window.scrollTo(0,0)
+        document.body.classList.remove("bara-body")
+        this.props.leftTransition()
     }render(){
         return(
             <main id="so-main">

@@ -11,10 +11,10 @@
     /*margin-top:auto;
     margin-bottom: auto;*/
     .transition-header{
-        width: 82.5%;
+        /*width: 82.5%;
         position: absolute;
         left: 4.4%;
-        margin-top: 1.35%;
+        margin-top: 1.35%;*/
         opacity: 0;
         animation: fadeIn ease-in 1;
         animation-fill-mode: forwards;
@@ -51,14 +51,14 @@
         }
     }
     .transition-main{
-        position: absolute;
-        left:-1200px;
+        //position: absolute;
+        //left:-1200px;
         //margin-right: 1000rem;
-        width: 81%;
+        //width: 81%;
 
         animation: left-slide ease-in 1;
         animation-fill-mode: forwards;
-        animation-duration: 2.5s;
-        top:7.7%;
+        animation-duration: 3s;
+        //top:7.7%;
     }
 }
