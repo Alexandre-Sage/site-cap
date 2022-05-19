@@ -31,7 +31,7 @@ export default function ArchitectMain(){
             <header id="arch-header">
                 <div className="architect-spacer"></div>
                 <Suspense>
-                <NavBar/>
+                    <NavBar/>
                 </Suspense>
             </header>
             {designName==="ibis-budget"?<Suspense fallback={waitingComp}><IbisMain/></Suspense>:null}

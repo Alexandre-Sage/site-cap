@@ -13,6 +13,7 @@ root.render(
                 <Route path="/" element={<App/>}/>
                 <Route path="/architecture-interieur/:designName" element={<ArchitectMain/>}>
                 </Route>
+                <Route path="design/:designName"/>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>

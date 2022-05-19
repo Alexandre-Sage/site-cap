@@ -35,22 +35,22 @@ export default class NavBar extends Component{
                 {
                     date: 2017,
                     name: "Corpsage",
-                    path: "#"
+                    path: "/design/corpsage"
                 },
                 {
                     date: 2018,
                     name: "Extent",
-                    path: "#"
+                    path: "/design/extent"
                 },
                 {
                     date: 2019,
                     name: "Trousso",
-                    path: "#"
+                    path: "/design/trousso"
                 },
                 {
                     date: 2020,
                     name: "Cabriole",
-                    path: "#"
+                    path: "/design/cabriole"
                 },
             ]
         }

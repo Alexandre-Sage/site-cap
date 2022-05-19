@@ -18,17 +18,34 @@ import sushiWeb from "../../../images/architecture/sushi-shop/sushiweb.png";
 import sushiPhone from "../../../images/architecture/sushi-shop/sushiphone.png";
 import sushiApp from "../../../images/architecture/sushi-shop/sushiapp.png";
 
+import firebase from 'firebase/compat/app';
+import {getStorage, storage,ref,listAll,getDownloadURL} from "firebase/storage";
+import {dataBase, firebaseApp} from "../../../firebase.js";
 export default class SushiShop extends Component{
     constructor(props){
         super(props)
         this.state={
-
+            testBase:[]
         }
     } componentDidMount(){
         this.props.leftTransition()
+        const storage=getStorage()
+        const refS=ref(storage, "architect/baragouin/bara-header")
+        const list=
+        listAll(refS)
+        .then(res=>res.items.forEach((item, i) => {
+            const test= getDownloadURL(item).then(res=>this.setState({
+                testBase: res
+            }))
+
+        }))
     }render(){
+        const {testBase}=this.state
+        console.log(testBase);
         return(
                 <main id="sushi-main">
+                <img src={`${testBase}`} alt="" />
+                    <img src="gs://site-cap-a764f.appspot.com/architect/baragouin/bara-header/boirevin.jpg " alt="" />
                 <div className="sushi-header">
                     <div className="title-logo-container">
                         <div className="logo-container">

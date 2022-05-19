@@ -1,20 +1,14 @@
 import React,{useState,useEffect} from 'react';
 import baraLogo from "../../../images/architecture/baragouin/logobaragouin.png";
-
 import vin from "../../../images/architecture/baragouin/vin.png";
 import drink from "../../../images/architecture/baragouin/boirevin.jpg";
 import glasse from "../../../images/architecture/baragouin/verre.png";
-
 import agenda from "../../../images/architecture/baragouin/programme.png";
 
-import {Cloudinary} from "@cloudinary/url-gen";
-import { AdvancedImage, accessibility, responsive } from '@cloudinary/react';
+//import {dataBase, firebaseC} from "../../../firebase.js";
 
 export default function BaraHeader(){
-    /*fetch("https://cloudinary://884488734867246:WqfDZV-10vGx8dSafV7-5jt0Ces@dtndbr9dp")
-    .then(res=>console.log(res))*/
-    const myCld = new Cloudinary({ cloudName: 'dtndbr9dp'});
-    console.log(myCld.image());
+
     return(
         <React.Fragment>
         <div className="bara-header">
