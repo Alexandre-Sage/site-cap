@@ -1,6 +1,6 @@
 //import {initializeApp}  from "firebase/app";
 import firebase from 'firebase/compat/app';
-import { getStorage } from "firebase/storage";
+import {getStorage,listAll,getDownloadURL} from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBySHuUCZNnBUpsE5sbOvv2iS-Ao3X9B_M",
@@ -14,3 +14,9 @@ const firebaseConfig = {
 //console.log(firebase);
 export const firebaseApp=firebase.initializeApp(firebaseConfig);
 export const dataBase= getStorage(firebaseApp);
+export const fetchStorage=(refFolder,callBack)=>listAll(refFolder)
+    .then(res=>res.items.forEach((item, i) => {
+        const objectKey=item.name.split(".")[0];
+        getDownloadURL(item)
+        .then(res=>callBack(objectKey,res))
+    }))
