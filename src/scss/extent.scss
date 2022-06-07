@@ -1,0 +1,93 @@
+@import "./main.scss";
+
+#extent-main{
+    img{
+        width: 10rem;
+        height: 10rem;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 5%;
+    margin: auto;
+    .extent-header{
+        margin-top: 5%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        .logo{
+            width: 70%;
+            align-self: flex-end;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }//logo
+        .text-container{
+            h1{
+                @include all-h1;
+            }
+            p{
+                @include paragraph;
+
+            }
+        }//text-container
+    }//extent-header
+    .scene{
+        width: 100%;
+        margin-top: -10%;
+        overflow: hidden;
+        z-index: -5;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .notice{
+        margin-top: 5%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        //align-items: center;
+        h2{
+            @include all-h2;
+        }
+        div{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//notice
+    .kit{
+        margin-top: 5%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            @include all-h2;
+        }
+        div{
+            margin-top: 2.5%;
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//kit
+    .extent-footer{
+        width: 100%;
+        margin-bottom: 5%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

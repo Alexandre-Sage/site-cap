@@ -2,8 +2,6 @@ import React,{lazy,Component,Suspense} from 'react';
 import {Link} from "react-router-dom";
 import "../../../scss/sushi.scss";
 
-
-
 import firebase from 'firebase/compat/app';
 import {getStorage, storage,ref,listAll,getDownloadURL} from "firebase/storage";
 import {dataBase, firebaseApp, /*fetchStorage*/} from "../../../firebase.js";
@@ -20,6 +18,7 @@ export default class SushiShop extends Component{
             }
         }
     }  async componentDidMount(){
+        document.body.classList.remove("bara-body")
         /*fetchStorage (refFolder,callBack){
             listAll(refFolder)
             .then(res=>res.items.forEach((item, i) => {

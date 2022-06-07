@@ -2,9 +2,9 @@ import React,{useState,useEffect} from 'react';
 import firebase from 'firebase/compat/app';
 import {getStorage, storage, ref, listAll, getDownloadURL} from "firebase/storage";
 import {dataBase, firebaseApp, /*fetchStorage*/} from "../../../firebase.js";
-/*import logo from "../../../images/architecture/sushi-shop/logo.png";
+import logo from "../../../images/architecture/sushi-shop/logo.png";
 import text from "../../../images/architecture/sushi-shop/text.png";
-import mood from "../../../images/architecture/sushi-shop/mood.png";*/
+import mood from "../../../images/architecture/sushi-shop/mood.png";
 
 export default  function SushiHeader(props){
     const [sushiImage,setImage]= useState({})
@@ -28,11 +28,11 @@ export default  function SushiHeader(props){
         <div className="sushi-header">
             <div className="title-logo-container">
                 <div className="logo-container">
-                    <img src={sushiImage.logo} alt="" />
+                    <img src={logo} alt="" />
                 </div>
                 <div className="text-container">
                     <div className="image-container">
-                        <img src={sushiImage.text} alt="" />
+                        <img src={text} alt="" />
                     </div>
                     <div className="title-container">
                         <h2><strong>Sushishop</strong> | 2020</h2>
@@ -44,7 +44,7 @@ export default  function SushiHeader(props){
                 </div>
             </div>
             <div className="header-image-container">
-                <img src={sushiImage.mood} alt="" />
+                <img src={mood} alt="" />
             </div>
         </div>
     )

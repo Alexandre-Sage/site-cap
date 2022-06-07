@@ -1,0 +1,158 @@
+@import "./main.scss";
+
+#cabriole-main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    .cab-header{
+        //border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        //margin-top: 5%;
+        .logo{
+            width: 25%;
+            align-self: flex-end;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        h1{
+            margin-right: 25%;
+            @include all-h1;
+        }
+        .image-container{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//cab-header
+    .images-column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 90%;
+        margin-top: 5%;
+        div{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//images-column
+    .open-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //justify-content: space-between;
+        width: 90%;
+        margin-top: 5%;
+        div{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        #open{
+            margin-bottom: 5%;
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border: 0.01rem solid lightgrey;
+            #previous-button{
+                border-top:2px solid black;
+                border-left:2px solid black;
+                width: 3.5rem;
+                height: 3.5rem;
+                transform:  rotate(-45deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover{
+                    div{
+                        border-top:4px solid black;
+                        border-left:4px solid black;
+                    }
+                }
+                div{
+                    width: 100%;
+                    //position: absolute;
+                    margin-left: 2.5%;
+                    border-top:2px solid black;
+                    border-left:2px solid black;
+                    width: 2rem;
+                    height: 2rem;
+                    transform: rotate(0deg);
+                }
+            }
+            #next-button{
+                transform: rotate(135deg);
+                border-top:2px solid black;
+                border-left:2px solid black;
+                width: 3.5rem;
+                height: 3.5rem;
+                //transform:  rotate(-45deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover{
+                    div{
+                        //animation: bookButtons ease-in 2;
+                        //animation-fill-mode: forwards;
+                        //animation-duration: 1s;
+                        //animation-delay: 0.5s;
+                        border-top:4px solid black;
+                        border-left:4px solid black;
+                    }
+                }
+                div{
+                    width: 100%;
+                    //position: absolute;
+                    margin-left: 2.5%;
+                    border-top:2px solid black;
+                    border-left:2px solid black;
+                    width: 2rem;
+                    height: 2rem;
+                    transform: rotate(0deg);
+                }
+            }
+            .frame-container{
+                width: 80%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+        }
+    }//open-container
+    #draw-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-top: 5%;
+        div{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }//draw-container
+}

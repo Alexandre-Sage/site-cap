@@ -15,10 +15,31 @@ export default function Book(){
         {index:2,pathOne: pageFive, pathTwo:pageSix},
     ])
     const [displayedImages,setDisplay]=useState({
-        leftPage:pageOne,
-        rightPage: pageTwo
+        leftPage:{path:pageOne,index:0},
+        rightPage: {path:pageTwo,index:0},
     })
-    async function next(event){
+    const next=async()=>{
+        const leftPage=document.getElementById("left-page");
+        const rightPage=document.getElementById("right-page");
+        let index=parseInt(leftPage.getAttribute("index"));
+        index<image.length-1?index++:index=0;
+        setDisplay({
+            leftPage: {path:image[index].pathOne,index:image[index].index},
+            rightPage: {path:image[index].pathTwo,index:image[index].index}
+        });
+    }
+    const previous=async()=>{
+        const leftPage=document.getElementById("left-page");
+        const rightPage=document.getElementById("right-page");
+        let index=parseInt(leftPage.getAttribute("index"));
+        index>0?index--:index=image.length-1;
+        setDisplay({
+            leftPage: {path:image[index].pathOne,index:image[index].index},
+            rightPage: {path:image[index].pathTwo,index:image[index].index}
+        });
+    }
+
+    /*async function next(event){
         const imagesContainer=document.getElementById("images-container");
         imagesContainer.classList.add("transition-out")
         const displayedImage=parseInt(event.target.getAttribute("index"))
@@ -51,17 +72,17 @@ export default function Book(){
         setTimeout(()=>{
             imagesContainer.classList.remove("transition-in")
         },1300)
-    }
+    }*/
     return(
         <React.Fragment>
             <div id="book-container">
                 <img className="background" src={background} alt="" />
                 <div id="images-container">
                     <div>
-                        <img id="left-page" src={displayedImages.leftPage}  alt="" />
+                        <img id="left-page" index={displayedImages.leftPage.index} src={displayedImages.leftPage.path}  alt="" />
                     </div>
                     <div>
-                        <img id="right-page" src={displayedImages.rightPage} index="1" alt="" />
+                        <img id="right-page" src={displayedImages.rightPage.path} index="1" alt=""/>
                     </div>
                 </div>
                 <div className="button-container">

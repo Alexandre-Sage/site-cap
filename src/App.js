@@ -2,17 +2,24 @@ import React from 'react';
 import {Component} from "react";
 import NavBar from "./components/modules/NavBar.jsx";
 import photoCap from "./images/landing-page/capucine.jpg";
+import Contact from "./components/contact/contact.jsx";
 import "./scss/app.scss";
 
 export default class App extends Component {
     constructor(props) {
         super(props)
         this.state={
-
+            displayContact: false
         }
     } componentDidMount(){
         document.body.classList.add("landing-page-body");
         document.body.classList.remove("architect-body")
+        document.body.classList.remove("design-body")
+        document.body.classList.remove("bara-body")
+    } displayContact(){
+        this.setState({
+            displayContact:true
+        });
     } render(){
         const spacerJsx=<div className="landing-page-spacer"></div>
 
@@ -20,13 +27,13 @@ export default class App extends Component {
             <React.Fragment>
                 <header>
                     {window.innerWidth>1000?spacerJsx:null}
-                    <NavBar/>
+                    <NavBar contact={(event)=>this.displayContact(event)}/>
                 </header>
                 <main>
                     <div className="image-container">
                         <img src={photoCap} alt="Photo Capucine"/>
                     </div>
-                    <div className="text-button-container">
+                    {this.state.displayContact?<Contact/>:<div className="text-button-container">
                         <span><h1>Capucine Sage</h1> | <h2>Architecte d'intérieur</h2></span>
                         <div>
                             <p>Diplômée en design global à l'École Bleue, je suis créative, méticuleuse, soignée avec de réelles
@@ -43,7 +50,7 @@ export default class App extends Component {
                         <div id="download-button">
                             Télécharger Cv
                         </div>
-                    </div>
+                    </div>}
                 </main>
             </React.Fragment>
         )

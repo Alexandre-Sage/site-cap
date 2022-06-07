@@ -85,7 +85,7 @@
             align-content: space-around;
             div{
                 width: 45%;
-                height: 70rem;
+                height: auto;
                 margin-top: 0;
                 h3{
                     margin-left: 1.5rem;
@@ -163,7 +163,7 @@
     .typo-container{
         width: 90%;
         margin-left: auto;
-        margin-top: 5%;
+        margin-top: 10%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;

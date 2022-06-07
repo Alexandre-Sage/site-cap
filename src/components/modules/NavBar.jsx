@@ -82,7 +82,6 @@ export default class NavBar extends Component{
                         <div className="sub-nav-list">
                             <div>
                             {this.state.architectNav.map((item,key)=>(
-                                console.log(item.path),
                                 <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                             ))}
                             </div>
@@ -100,7 +99,6 @@ export default class NavBar extends Component{
                             <div  className="sub-nav-list design">
                                 <div>
                                 {this.state.designNav.map((item,key)=>(
-                                    console.log(item.name),
                                     <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                                 ))}
                                 </div>
@@ -115,7 +113,6 @@ export default class NavBar extends Component{
                             <div  className="sub-nav-list design">
                                 <div>
                                 {this.state.designNav.map((item,key)=>(
-                                    console.log(item.name),
                                     <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                                 ))}
                                 </div>
@@ -145,7 +142,7 @@ export default class NavBar extends Component{
                             {this.state.displayDesignNav?this.state.subNavJsx:null}
                         </li>
                         <Link to="/" id="dessin">Dessin</Link>
-                        <Link to="#" id="contact">Contact</Link>
+                        <Link to="#" id="contact" onClick={this.props.contact}>Contact</Link>
                     </ul>
                 </nav>
         )

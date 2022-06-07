@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App';
 import ArchitectMain from "./components/architect/ArchitectMain.jsx";
+import DesignMain from "./components/design/DesignMain.jsx";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,7 +14,7 @@ root.render(
                 <Route path="/" element={<App/>}/>
                 <Route path="/architecture-interieur/:designName" element={<ArchitectMain/>}>
                 </Route>
-                <Route path="design/:designName"/>
+                <Route path="design/:designName" element={<DesignMain/>}/>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
