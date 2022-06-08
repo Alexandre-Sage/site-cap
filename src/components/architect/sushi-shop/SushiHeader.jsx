@@ -1,29 +1,9 @@
 import React,{useState,useEffect} from 'react';
-import firebase from 'firebase/compat/app';
-import {getStorage, storage, ref, listAll, getDownloadURL} from "firebase/storage";
-import {dataBase, firebaseApp, /*fetchStorage*/} from "../../../firebase.js";
 import logo from "../../../images/architecture/sushi-shop/logo.png";
 import text from "../../../images/architecture/sushi-shop/text.png";
 import mood from "../../../images/architecture/sushi-shop/mood.png";
 
 export default  function SushiHeader(props){
-    const [sushiImage,setImage]= useState({})
-    const {fetchStorage}=props;
-    const storage=getStorage();
-    const refFolder= ref(storage, "architect/sushi-shop/sushi-header");
-    const callBack=async (objectKey,objectValue)=>await setImage(prevState=>({
-        ...prevState, [objectKey]:objectValue
-    }));
-    useEffect(()=>{
-        /*listAll(refFolder)
-        .then(res=>res.items.forEach((item, i) => {
-            const objectKey=item.name.split(".")[0];
-            getDownloadURL(item)
-            .then(res=>callBack(objectKey,res))
-        }))*/
-        fetchStorage(refFolder ,callBack)
-    },[props])
-    console.log(sushiImage);
     return(
         <div className="sushi-header">
             <div className="title-logo-container">

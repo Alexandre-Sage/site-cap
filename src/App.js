@@ -22,7 +22,6 @@ export default class App extends Component {
         });
     } render(){
         const spacerJsx=<div className="landing-page-spacer"></div>
-
         return(
             <React.Fragment>
                 <header>

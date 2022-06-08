@@ -1,5 +1,4 @@
 import React from 'react';
-import firebase from 'firebase/compat/app';
 
 import cutOne from "../../../images/architecture/sushi-shop/coupe1.png";
 import cutTwo from "../../../images/architecture/sushi-shop/coupe2.png";

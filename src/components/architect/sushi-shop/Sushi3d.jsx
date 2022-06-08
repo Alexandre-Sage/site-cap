@@ -1,8 +1,4 @@
-import React,{useState,useEffect} from 'react';
-import firebase from 'firebase/compat/app';
-import {getStorage, storage, ref, listAll, getDownloadURL} from "firebase/storage";
-import {dataBase, firebaseApp, /*fetchStorage*/} from "../../../firebase.js";
-
+import React,{useState,useEffect} from "react";
 import renderOne from "../../../images/architecture/sushi-shop/rendua.png";
 import renderTwo from "../../../images/architecture/sushi-shop/rendub.png";
 import faceOne from "../../../images/architecture/sushi-shop/face1.png";
@@ -10,16 +6,6 @@ import faceTwo from "../../../images/architecture/sushi-shop/face2.png";
 import plan from "../../../images/architecture/sushi-shop/plan.png";
 
 export default function Sushi3D(props){
-    const [sushiImage,setImage]= useState({})
-    const {fetchStorage}=props;
-    const storage=getStorage();
-    const refFolder= ref(storage, "architect/sushi-shop/sushi-3d");
-    const callBack=async (objectKey,objectValue)=>await setImage(prevState=>({
-        ...prevState, [objectKey]:objectValue
-    }));
-    useEffect(()=>{
-        fetchStorage(refFolder,callBack)
-    })
     return(
         <React.Fragment>
         <div className="architecture-3d">
