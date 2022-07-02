@@ -1,0 +1,26 @@
+@import "./main.scss";
+@keyframes loading {
+    from{width:0;}
+    to {width: 15%}
+};
+
+.loading-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background: black;
+    h1{
+        @include all-h1;
+    }
+    .loading-bar{
+        width: 100%;
+        width: 0;
+        animation: 3s ease-in-out  infinite loading;
+        border: 2px solid black;
+    }
+}

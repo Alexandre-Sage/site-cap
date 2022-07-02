@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     width: 90%;
-    margin-top: 5%;
+    margin-top: 10%;
     opacity: 0;
     animation: fadeIn ease-in 1;
     animation-fill-mode: forwards;
@@ -23,6 +23,7 @@
         width: 65%;
         align-self: flex-end;
         margin-right: 3%;
+        z-index: -1;
         .ibis-spacer{
 
         }

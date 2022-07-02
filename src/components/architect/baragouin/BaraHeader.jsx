@@ -1,19 +1,19 @@
 import React,{useState,useEffect} from 'react';
-import baraLogo from "../../../images/architecture/baragouin/logobaragouin.png";
-import vin from "../../../images/architecture/baragouin/vin.png";
+//import baraLogo from "../../../images/architecture/baragouin/logobaragouin.png";
 import drink from "../../../images/architecture/baragouin/boirevin.jpg";
+import vin from "../../../images/architecture/baragouin/vin.png";
 import glasse from "../../../images/architecture/baragouin/verre.png";
 import agenda from "../../../images/architecture/baragouin/programme.png";
 
 //import {dataBase, firebaseC} from "../../../firebase.js";
 
 export default function BaraHeader(){
-
+    console.log(process.env)
     return(
         <React.Fragment>
         <div className="bara-header">
             <div className="logo-container">
-                <img src={baraLogo} alt="logo baragouin" />
+                <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/logobaragouin.png`} alt="logo baragouin"/>
             </div>
             <div className="title-container">
                 <h1><strong>Diplôme Baragouin</strong> | 2021</h1>
@@ -28,19 +28,19 @@ export default function BaraHeader(){
             <div className="images-container">
                 <div className="drink">
                     <div>
-                        <img src={drink} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/boirevin.jpg`} alt="" />
                     </div>
                     <p>Lumière pour mûrir</p>
                 </div>
                 <div className="wine">
                     <div>
-                        <img src={vin} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/vin.png`} alt="" />
                     </div>
                     <p>Le vin</p>
                 </div>
                 <div className="glasse">
                     <div>
-                        <img src={glasse} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/verre.png`} alt="" />
                     </div>
                     <p>Obscurité pour viellir</p>
                 </div>
@@ -49,7 +49,7 @@ export default function BaraHeader(){
         <div className="agenda">
             <h2><strong>Programme</strong></h2>
             <div>
-                <img src={agenda} alt="" />
+                <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/programme.png`} alt="" />
             </div>
         </div>
         </React.Fragment>

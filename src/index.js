@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App';
+import Contact from "./components/contact/Contact.jsx";
 import ArchitectMain from "./components/architect/ArchitectMain.jsx";
 import DesignMain from "./components/design/DesignMain.jsx";
 import reportWebVitals from './reportWebVitals';
@@ -12,6 +13,7 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App/>}/>
+                <Route path="/:contact" element={<App/>}/>
                 <Route path="/architecture-interieur/:designName" element={<ArchitectMain/>}>
                 </Route>
                 <Route path="design/:designName" element={<DesignMain/>}/>

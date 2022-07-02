@@ -1,7 +1,7 @@
 import React,{lazy, Component, Suspense} from 'react';
 import {Link} from "react-router-dom";
 import "../../../scss/baragouin.scss";
-
+import LoadingComp from "../../modules/LoadingComp";
 const BaraHeader=lazy(async ()=> await import("./BaraHeader.jsx"));
 const BaraPlace=lazy(async ()=>await import("./BaraPlace.jsx"));
 const BaraFace=lazy(async ()=>await import("./BaraFace.jsx"));
@@ -18,23 +18,18 @@ export default class Baragouin extends Component{
         document.body.classList.add("bara-body")
     } render(){
         return(
+            <Suspense fallBack={<LoadingComp/>}>
             <main id="bara-main">
-                <Suspense fallback={<div>Loading...</div>}>
                     <BaraHeader/>
-                </Suspense>
-                <Suspense fallback={<div>Loading...</div>}>
                     <BaraPlace/>
-                </Suspense>
                 <div className="research">
                     <h2><strong>Recherches</strong> | La faille sous-marine</h2>
-                    <Suspense fallback={<div>Loading...</div>}>
                         <Book/>
-                    </Suspense>
                 </div>{/*Fin background*/}
-                <Suspense fallback={<div>Loading...</div>}>
                     <Bara3D/>
-                </Suspense>
+                    <BaraFace/>
             </main>
+            </Suspense>
         )
     }
 }

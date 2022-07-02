@@ -68,7 +68,7 @@ export default class NavBar extends Component{
                         <div className="sub-nav-list">
                             <div>
                             {this.state.architectNav.map((item,key)=>(
-                                <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
+                                window.location.href.includes("architecture-interieur")?<Link key={key} className="sub-link" to="#" onClick={()=>this.props.setComp(item.path.split("/")[2])}>{item.date} | {item.name}</Link>:<Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                             ))}
                             </div>
                         </div>,
@@ -82,7 +82,7 @@ export default class NavBar extends Component{
                         <div className="sub-nav-list">
                             <div>
                             {this.state.architectNav.map((item,key)=>(
-                                <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
+                                window.location.href.includes("architecture-interieur")?<Link key={key} className="sub-link" to="#" onClick={()=>this.props.setComp(item.path.split("/")[2])}>{item.date} | {item.name}</Link>:<Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                             ))}
                             </div>
                         </div>,
@@ -99,7 +99,7 @@ export default class NavBar extends Component{
                             <div  className="sub-nav-list design">
                                 <div>
                                 {this.state.designNav.map((item,key)=>(
-                                    <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
+                                    window.location.href.includes("design")?<Link key={key} className="sub-link" to="#" onClick={()=>this.props.setComp(item.path.split("/")[2])}>{item.date} | {item.name}</Link>:<Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                                 ))}
                                 </div>
                             </div>,
@@ -113,7 +113,7 @@ export default class NavBar extends Component{
                             <div  className="sub-nav-list design">
                                 <div>
                                 {this.state.designNav.map((item,key)=>(
-                                    <Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
+                                    window.location.href.includes("design")?<Link key={key} className="sub-link" to="#" onClick={()=>this.props.setComp(item.path.split("/")[2])}>{item.date} | {item.name}</Link>:<Link key={key} className="sub-link" to={item.path}>{item.date} | {item.name}</Link>
                                 ))}
                                 </div>
                             </div>,
@@ -128,12 +128,12 @@ export default class NavBar extends Component{
 
     } render(){
         const array=this.state.architectNav[0];
-        console.log(array);
+        const {acceuil,contactIsDisplayed}=this.props;
         return(
                 <nav id="nav-bar">
                     <ul>
-                        <Link to="/" id="acceuil">Accueil</Link>
-                        <li >
+                        {this.props.acceuil?<Link to="#" id="acceuil" onClick={contactIsDisplayed?this.props.contact:null}>Acceuil</Link>:<Link to="/" id="acceuil" state={{contact:false}}>Accueil</Link>}
+                        <li>
                             <p id="architect" onClick={(event)=>this.handleSubNavDisplay(event)}>Architecture d'intérieur</p>
                             {this.state.displayArchitectNav?this.state.subNavJsx:null}
                         </li>
@@ -142,9 +142,9 @@ export default class NavBar extends Component{
                             {this.state.displayDesignNav?this.state.subNavJsx:null}
                         </li>
                         <Link to="/" id="dessin">Dessin</Link>
-                        <Link to="#" id="contact" onClick={this.props.contact}>Contact</Link>
+                        <Link to="/" id="contact" onClick={this.props.contact} state={{contact:true}}>Contact</Link>
                     </ul>
                 </nav>
-        )
-    }
-}
+        );
+    };
+};

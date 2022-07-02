@@ -1,4 +1,6 @@
 @import "main.scss";
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}};
+
 
 #sushi-main{
     display: flex;
@@ -17,7 +19,6 @@
         margin-left: auto;
         width: 90%;
         .title-logo-container{
-
             display: flex;
             flex-direction: column;
             .logo-container{

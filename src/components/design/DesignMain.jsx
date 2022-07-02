@@ -8,8 +8,7 @@ const Extent=lazy(async()=>await import("./extent/Extent.jsx"));
 const Cabriole=lazy(async()=>await import("./cabriole/Cabriole.jsx"));
 
 export default function DesignMain(){
-    const {designName}=useParams();
-    console.log(designName);
+    let designName=useParams().designName;
     useEffect(()=>{
         document.body.classList.add("design-body");
         document.body.classList.remove("architect-body");
@@ -17,12 +16,14 @@ export default function DesignMain(){
         document.body.classList.remove("bara-body");
     })
     const waitingComp=<div>Loading...</div>
+    const [displayedComp,setComp]=useState(designName);
+    designName=useParams().designName!==displayedComp?displayedComp:designName;
     return(
         <React.Fragment>
             <header id="design-header">
                 <div className="design-spacer"></div>
                 <Suspense>
-                    <NavBar/>
+                    <NavBar setComp={(event)=>setComp(event)}/>
                 </Suspense>
             </header>
             <Suspense fallback={waitingComp}></Suspense>

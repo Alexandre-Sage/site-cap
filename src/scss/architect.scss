@@ -36,7 +36,6 @@
             width: 65%;
             div{
                 background-color: black;
-
             }
             .activated{
                 color: white;
@@ -52,14 +51,8 @@
         }
     }
     .transition-main{
-        //position: absolute;
-        //left:-1200px;
-        //margin-right: 1000rem;
-        //width: 81%;
-
         animation: left-slide ease-in 1;
         animation-fill-mode: forwards;
         animation-duration: 3s;
-        //top:7.7%;
     }
 }

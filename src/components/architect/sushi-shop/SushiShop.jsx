@@ -1,31 +1,23 @@
-import React,{lazy,Component,Suspense} from 'react';
+import React,{Component} from 'react';
 import {Link} from "react-router-dom";
 import "../../../scss/sushi.scss";
 
-const SushiHeader=lazy(async()=>await import("./SushiHeader.jsx"));
-const Sushi3D=lazy(async()=>await import("./Sushi3d.jsx"));
-const SushiCut=lazy(async()=>await import("./SushiCut.jsx"));
+import SushiHeader from "./SushiHeader.jsx";
+import Sushi3D from "./Sushi3d.jsx";
+import SushiCut from "./SushiCut.jsx";
 export default class SushiShop extends Component{
     constructor(props){
         super(props)
-        this.state={
-            sushiImage:{
-
-            }
-        }
-    }  async componentDidMount(){
+    }componentDidMount(){
         document.body.classList.remove("bara-body")
         this.props.leftTransition()
     }render(){
         return(
-                <main id="sushi-main">
-                <Suspense>
-                    <SushiHeader/>
-                    <Sushi3D/>
-                    <SushiCut/>
-                </Suspense>
-
+            <main id="sushi-main">
+                <SushiHeader/>
+                <Sushi3D/>
+                <SushiCut/>
             </main>
-        )
-    }
-}
+        );
+    };
+};
