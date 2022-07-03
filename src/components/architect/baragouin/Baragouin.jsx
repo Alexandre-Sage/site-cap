@@ -26,8 +26,8 @@ export default class Baragouin extends Component{
                     <h2><strong>Recherches</strong> | La faille sous-marine</h2>
                         <Book/>
                 </div>{/*Fin background*/}
-                    <Bara3D/>
                     <BaraFace/>
+                    <Bara3D/>
             </main>
             </Suspense>
         )

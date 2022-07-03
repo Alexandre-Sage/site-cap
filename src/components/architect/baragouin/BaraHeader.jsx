@@ -1,11 +1,4 @@
 import React,{useState,useEffect} from 'react';
-//import baraLogo from "../../../images/architecture/baragouin/logobaragouin.png";
-import drink from "../../../images/architecture/baragouin/boirevin.jpg";
-import vin from "../../../images/architecture/baragouin/vin.png";
-import glasse from "../../../images/architecture/baragouin/verre.png";
-import agenda from "../../../images/architecture/baragouin/programme.png";
-
-//import {dataBase, firebaseC} from "../../../firebase.js";
 
 export default function BaraHeader(){
     console.log(process.env)

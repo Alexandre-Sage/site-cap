@@ -1,9 +1,4 @@
 import React,{useState,useEffect} from "react";
-import renderOne from "../../../images/architecture/sushi-shop/rendua.png";
-import renderTwo from "../../../images/architecture/sushi-shop/rendub.png";
-import faceOne from "../../../images/architecture/sushi-shop/face1.png";
-import faceTwo from "../../../images/architecture/sushi-shop/face2.png";
-import plan from "../../../images/architecture/sushi-shop/plan.png";
 
 export default function Sushi3D(props){
     return(
@@ -12,10 +7,10 @@ export default function Sushi3D(props){
             <h2><strong>Architecture d'intérieur</strong> | 3D</h2>
             <div>
                 <div>
-                    <img src={renderOne} alt="" />
+                    <img src={`${process.env.REACT_APP_API_URL}images/architecture/sushi-shop/rendua.png`} alt="" />
                 </div>
                 <div>
-                    <img src={renderTwo} alt="" />
+                    <img src={`${process.env.REACT_APP_API_URL}images/architecture/sushi-shop/rendub.png`} alt="" />
                 </div>
             </div>
         </div>
@@ -23,17 +18,17 @@ export default function Sushi3D(props){
             <h2><strong>Architecture d'intérieur</strong> | Façades</h2>
             <div>
                 <div>
-                    <img src={faceOne} alt="" />
+                    <img src={`${process.env.REACT_APP_API_URL}images/architecture/sushi-shop/face1.png`} alt="" />
                 </div>
                 <div className="face-two">
-                    <img src={faceTwo} alt="" />
+                    <img src={`${process.env.REACT_APP_API_URL}images/architecture/sushi-shop/face2.png`} alt="" />
                 </div>
             </div>
         </div>
         <div className="plan">
             <h2><strong>Architecture d'intérieur</strong> | Plan</h2>
             <div>
-                <img src={plan} alt="" />
+                <img src={`${process.env.REACT_APP_API_URL}images/architecture/sushi-shop/plan.png`} alt="" />
             </div>
         </div>
         </React.Fragment>

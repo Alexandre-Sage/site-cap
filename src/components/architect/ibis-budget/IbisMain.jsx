@@ -1,41 +1,11 @@
 import React from 'react';
 import {Component} from "react";
-import {Link} from "react-router-dom";
-import logo from "../../../images/architecture/ibis/logo.png";
-import rdc from "../../../images/architecture/ibis/rdc.png";
-import r1 from "../../../images/architecture/ibis/r1.png";
-import facade from "../../../images/architecture/ibis/facade.png";
-import coupeA from "../../../images/architecture/ibis/coupe-a.png";
-import coupeB from "../../../images/architecture/ibis/coupe-b.png";
-import croquisA from "../../../images/architecture/ibis/croquis-a.png";
-import croquisB from "../../../images/architecture/ibis/croquis-b.png";
-import croquisC from "../../../images/architecture/ibis/croquis-c.png";
-import typoCouleur from "../../../images/architecture/ibis/typo-couleur.png";
-import  typoNb from "../../../images/architecture/ibis/typo-nb.png";
-import goodies from "../../../images/architecture/ibis/goodies.png";
-import picto from "../../../images/architecture/ibis/pictogramme.png";
-import mac from "../../../images/architecture/ibis/mac.png";
 import "../../../scss/ibis.scss";
+//src={`${process.env.REACT_APP_API_URL}images/architecture/sushi-shop/`}
 export default class IbisMain extends Component{
     constructor(props){
         super(props)
         this.state={
-            image:[
-                {src:logo,index: 1},
-                {src:rdc,index: 2},
-                {src:r1,index: 3},
-                {src:facade,index: 4},
-                {src:coupeA,index: 5},
-                {src:coupeB,index: 6},
-                {src:croquisA,index: 7},
-                {src:croquisB,index: 8},
-                {src:croquisC,index: 9},
-                {src:typoCouleur,index: 10},
-                {src:typoNb,index: 11},
-                {src: goodies,index:12},
-                {src: picto, index:13},
-                {src: mac, index: 14}
-            ]
         }
     }componentDidMount(){
         document.body.classList.remove("bara-body")
@@ -46,7 +16,7 @@ export default class IbisMain extends Component{
                     <div className="ibis-spacer"></div>
                     <div className="header-container">
                         <div className="image-container">
-                            <img src={logo} alt="Logo ibis budget"/>
+                            <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/logo.png`} alt="Logo ibis budget"/>
                         </div>
                         <div className="title-text-ctn">
                             <h1><strong>Ibis budget</strong> | 2018</h1>
@@ -65,28 +35,28 @@ export default class IbisMain extends Component{
                         <div>
                             <h3>RDC</h3>
                             <div>
-                                <img src={rdc} alt="" />
+                                <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/rdc.png`} alt="" />
                             </div>
                         </div>
                         <div>
                             <h3>R+1</h3>
                             <div>
-                                <img src={r1} alt="" />
+                                <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/r1.png`} alt="" />
                             </div>
                         </div>
                         <div>
                             <h3>Façade</h3>
                             <div>
-                                <img src={facade} alt="" />
+                                <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/facade.png`} alt="" />
                             </div>
                         </div>
                         <div className="cuts">
                             <h3>Coupes</h3>
                             <div>
-                                <img src={coupeA} alt="" />
+                                <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/coupe-a.png`} alt="" />
                             </div>
                             <div>
-                                <img src={coupeB} alt="" />
+                                <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/coupe-b.png`} alt="" />
                             </div>
                         </div>
                     </div>
@@ -94,40 +64,39 @@ export default class IbisMain extends Component{
                 <div className="draw-container">
                     <h2><strong>Architecture d’intérieur</strong> | Croquis</h2>
                     <div>
-                        <img src={croquisA} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/croquis-a.png`} alt="" />
                     </div>
                     <div className="middle-image">
-                        <img src={croquisB} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/croquis-b.png`} alt="" />
                     </div>
                     <div>
-                        <img src={croquisC} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/croquis-c.png`} alt="" />
                     </div>
                 </div>
                 <div className="typo-container">
                     <h2><strong>Communication visuelle</strong>| Typographies</h2>
                     <div>
-                        <img src={typoCouleur} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/typo-couleur.png`} alt="" />
                     </div>
                     <div>
-                        <img src={typoNb} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/typo-nb.png`} alt="" />
                     </div>
                 </div>
                 <div className="goodies-container">
                     <h2><strong>Communication visuelle</strong> |   Goodies et pictogrammes</h2>
                         <div>
-                            <img src={goodies} alt="" />
+                            <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/goodies.png`} alt="" />
                         </div>
                         <div>
-                            <img src={picto} alt="" />
+                            <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/pictogramme.png`} alt="" />
                         </div>
                 </div>
                 <div className="web-site">
                     <h2><strong>Communication visuelle</strong>| Siteweb</h2>
                     <div>
-                        <img src={mac} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/ibis/mac.png`} alt="" />
                     </div>
                 </div>
-                <Link to={"/architecture-interieur/so-junior"}>Next</Link>
             </main>
         )
     }

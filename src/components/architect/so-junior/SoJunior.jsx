@@ -1,14 +1,5 @@
 import React from 'react';
 import {Component} from "react";
-import logo from "../../../images/architecture/so/logo.png";
-import smith from "../../../images/architecture/so/smith.jpg";
-import propagation from "../../../images/architecture/so/propagation.jpg";
-import moscou from "../../../images/architecture/so/moscou.jpg";
-import plan from "../../../images/architecture/so/plan.png";
-import cut from "../../../images/architecture/so/coupe.png";
-import materials from "../../../images/architecture/so/matériaux.png";
-import floor from "../../../images/architecture/so/Sol.png";
-import presc from "../../../images/architecture/so/prescripition.png";
 import "../../../scss/so.scss";
 
 export default class SoJunior extends Component{
@@ -25,7 +16,7 @@ export default class SoJunior extends Component{
             <main id="so-main">
                 <div className="so-header">
                     <div className="image-container">
-                        <img src={logo} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/so/logo.png`} alt="" />
                     </div>
                     <div className="title-text-ctn">
                         <h1><strong>So’ Junior Suite</strong> | 2019</h1>
@@ -40,19 +31,19 @@ export default class SoJunior extends Component{
                     <div className="images-container">
                     <div>
                         <div>
-                            <img className="smith" src={smith} alt="Paul Smith Chemise" />
+                            <img className="smith" src={`${process.env.REACT_APP_API_URL}images/architecture/so/smith.jpg`} alt="Paul Smith Chemise" />
                         </div>
                         <p>Paul Smith - Chemise</p>
                     </div>
                     <div>
                         <div>
-                            <img src={propagation} alt="propagation" />
+                            <img src={`${process.env.REACT_APP_API_URL}images/architecture/so/propagation.jpg`} alt="propagation" />
                         </div>
                         <p>Propagation</p>
                     </div>
                     <div>
                         <div>
-                            <img src={moscou} alt="" />
+                            <img src={`${process.env.REACT_APP_API_URL}images/architecture/so/moscou.jpg`} alt="" />
                         </div>
                         <p>Moscou - Place Rouge</p>
                     </div>
@@ -61,13 +52,13 @@ export default class SoJunior extends Component{
                 <div className="plan-container">
                     <h2><strong>Architecture d’intérieur</strong> | Plan</h2>
                     <div>
-                        <img src={plan} alt="Plan vue de dessus" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/so/plan.png`} alt="Plan vue de dessus" />
                     </div>
                 </div>
                 <div className="plan-container">
                     <h2><strong>Architecture d'intérieur</strong> | Coupes</h2>
                     <div>
-                        <img src={cut} alt="Coupe" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/so/coupe.png`} alt="Coupe" />
                     </div>
                 </div>
                 <div className="footer-container">
@@ -76,15 +67,15 @@ export default class SoJunior extends Component{
                         <div className="materials-container">
                             <div>
                                 <div>
-                                    <img src={materials} alt="" />
+                                    <img src={`${process.env.REACT_APP_API_URL}images/architecture/so/matériaux.png`} alt="" />
                                 </div>
                             </div>
                             <div className="floor">
-                                <img src={floor} alt="" />
+                                <img src={`${process.env.REACT_APP_API_URL}images/architecture/so/Sol.png`} alt="" />
                             </div>
                         </div>
                         <div className="pres-container">
-                            <img src={presc} alt="" />
+                            <img src={`${process.env.REACT_APP_API_URL}images/architecture/so/prescripition.png`} alt="" />
                         </div>
                     </div>
                 </div>

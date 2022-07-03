@@ -1,15 +1,4 @@
 import React from 'react';
-import restoOne from "../../../images/architecture/baragouin/resto1.png";
-import restoTwo from "../../../images/architecture/baragouin/resto2.png";
-import restoThree from "../../../images/architecture/baragouin/resto3.png";
-import restoFour from "../../../images/architecture/baragouin/resto4.png";
-import restoFive from "../../../images/architecture/baragouin/resto5.png";
-import restoSix from "../../../images/architecture/baragouin/resto6.png";
-
-import bookOne from "../../../images/architecture/baragouin/book1.png";
-import bookTwo from "../../../images/architecture/baragouin/book2.png";
-import bookThree from "../../../images/architecture/baragouin/book3.png";
-import subway from "../../../images/architecture/baragouin/subway.png";
 
 export default function Bara3D(){
     return(
@@ -19,28 +8,34 @@ export default function Bara3D(){
 
             <div>
                 <div className="simple">
-                    <img src={restoOne} alt="" />
+                    <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/resto1.png`}
+ alt="" />
                 </div>
                 <div className="double">
                     <div>
-                        <img src={restoTwo} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/resto2.png`}
+ alt="" />
                     </div>
                     <div>
-                        <img src={restoThree} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/resto3.png`}
+ alt="" />
                     </div>
                 </div>
             </div>
             <div>
                 <div className="double">
                     <div>
-                        <img src={restoFour} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/resto4.png`}
+ alt="" />
                     </div>
                     <div>
-                        <img src={restoFive} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/resto5.png`}
+ alt="" />
                     </div>
                 </div>
                 <div className="simple">
-                    <img src={restoSix} alt="" />
+                    <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/resto6.png`}
+ alt="" />
                 </div>
             </div>
         </div>
@@ -49,18 +44,22 @@ export default function Bara3D(){
             <div className="line-1">
                 <div className="book-container">
                     <div>
-                        <img src={bookOne} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/book1.png`}
+ alt="" />
                     </div>
                     <div>
-                        <img src={bookTwo} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/book2.png`}
+ alt="" />
                     </div>
                 </div>
                 <div className="image-container">
-                    <img src={bookThree} alt="" />
+                    <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/book3.png`}
+ alt="" />
                 </div>
             </div>
             <div className="line-2">
-                <img src={subway} alt="" />
+                <img src={`${process.env.REACT_APP_API_URL}images/architecture/baragouin/subway.png`}
+ alt="" />
             </div>
         </div>
         </React.Fragment>

@@ -1,18 +1,15 @@
 import React,{useState,useEffect} from 'react';
-import logo from "../../../images/architecture/sushi-shop/logo.png";
-import text from "../../../images/architecture/sushi-shop/text.png";
-import mood from "../../../images/architecture/sushi-shop/mood.png";
 
 export default  function SushiHeader(props){
     return(
         <div className="sushi-header">
             <div className="title-logo-container">
                 <div className="logo-container">
-                    <img src={logo} alt="" />
+                    <img src={`${process.env.REACT_APP_API_URL}images/architecture/sushi-shop/logo.png`} alt="" />
                 </div>
                 <div className="text-container">
                     <div className="image-container">
-                        <img src={text} alt="" />
+                        <img src={`${process.env.REACT_APP_API_URL}images/architecture/sushi-shop/text.png`} alt="" />
                     </div>
                     <div className="title-container">
                         <h2><strong>Sushishop</strong> | 2020</h2>
@@ -24,7 +21,7 @@ export default  function SushiHeader(props){
                 </div>
             </div>
             <div className="header-image-container">
-                <img src={mood} alt="" />
+                <img src={`${process.env.REACT_APP_API_URL}images/architecture/sushi-shop/mood.png`} alt="" />
             </div>
         </div>
     )
